@@ -19,4 +19,6 @@
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
+    <string name="Botao_proximo"/>
+    <string name="Botton_proximo">Próximo</string>
 </resources>

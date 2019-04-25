@@ -1,153 +1,149 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
               xmlns:app="http://schemas.android.com/apk/res-auto"
               xmlns:tools="http://schemas.android.com/tools"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
               android:orientation="vertical">
-
-    <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
+    <android.support.constraint.Guideline
             android:orientation="vertical"
-            android:padding="16dp">
-
-        <TextView
-                android:id="@+id/tvBMI"
-                android:layout_width="120dp"
-                android:layout_height="120dp"
-                android:background="@drawable/circle_background"
-                android:gravity="center"
-                android:textColor="@color/colorPrimary"
-                android:textSize="25dp"
-                tools:text="22.4" />
-
-        <TextView
-                android:id="@+id/tvResult"
-                android:shadowDx="4"
-                android:shadowDy="4"
-                android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/guideline"
+            app:layout_constraintGuide_percent="0.5"/>
+    <android.support.constraint.Guideline
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/guideline2"
+            app:layout_constraintGuide_percent="0.21"/>
+    <android.support.constraint.Guideline
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/guideline4"
+            app:layout_constraintGuide_percent="0.46"/>
+    <EditText
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:inputType="textPersonName"
+            android:text="Name"
+            android:ems="10"
+            android:id="@+id/editText5" android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toStartOf="@+id/guideline" android:layout_marginRight="8dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp" android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/guideline2" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/textView6"/>
+    <TextView
+            android:text="Qual seu peso?"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView6" app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp" android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/guideline2" app:layout_constraintEnd_toStartOf="@+id/guideline"
+            android:layout_marginEnd="8dp" android:layout_marginRight="8dp" android:layout_marginTop="8dp"
+            android:textSize="24sp"/>
+    <TextView
+            android:text="Qual sua alura?"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView7" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="@+id/guideline"
+            android:layout_marginLeft="8dp" android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp" android:layout_marginRight="8dp" android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/guideline2" android:textSize="24sp"/>
+    <EditText
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:inputType="textPersonName"
+            android:text="Name"
+            android:ems="10"
+            android:id="@+id/editText6" android:layout_marginStart="8dp"
+            app:layout_constraintStart_toStartOf="@+id/guideline" android:layout_marginLeft="8dp"
+            android:layout_marginEnd="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp" app:layout_constraintBottom_toTopOf="@+id/guideline2"
+            android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/textView7"/>
+    <TextView
+            android:text="Qual seu sexo?"
+            android:layout_width="wrap_content"
+            android:layout_height="26dp"
+            android:id="@+id/textView8"
+            android:textSize="24sp"
+            app:layout_constraintTop_toTopOf="@+id/guideline2" android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/guideline4" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="8dp" android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp" android:layout_marginRight="8dp" app:layout_constraintHorizontal_bias="0.494"
+            app:layout_constraintVertical_bias="0.225"/>
+    <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/guideline4" android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp" app:layout_constraintTop_toBottomOf="@+id/textView8">
+        <RadioButton
+                android:text="Mulher"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:id="@+id/radioButton" android:layout_weight="1"/>
+        <RadioButton
+                android:text="Homem"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:padding="8dp"
-                android:textSize="18sp"
-        />
-
-    </LinearLayout>
-
-    <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="bottom"
-            android:orientation="vertical">
-
-        <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:padding="16dp">
-
-            <TextView
-                    android:shadowDx="4"
-                    android:shadowDy="4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:paddingBottom="4dp"
-                    android:text="Weight"
-                    android:textColor="@color/black"
-                    android:textSize="18sp" />
-
-            <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:orientation="horizontal">
-
-                <TextView
-                        android:id="@+id/tvWeight"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/rounded_background"
-                        android:padding="4dp"
-                        android:text="50 Kg"
-                        android:textColor="@color/white"
-                        android:textSize="14sp" />
-
-                <org.adw.library.widgets.discreteseekbar.DiscreteSeekBar
-                        android:id="@+id/sbWeight"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        app:dsb_indicatorColor="@color/colorAccent"
-                        app:dsb_max="100"
-                        app:dsb_min="0"
-                        app:dsb_progressColor="@color/colorAccent"
-                        app:dsb_rippleColor="@color/colorAccent"
-                        app:dsb_trackColor="@color/colorAccent"
-                        app:dsb_trackHeight="4dp"
-                        app:dsb_value="50" />
-
-            </LinearLayout>
-        </LinearLayout>
-
-        <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:padding="16dp">
-
-            <TextView
-                    android:shadowDx="4"
-                    android:shadowDy="4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:paddingBottom="4dp"
-                    android:text="Height"
-                    android:textColor="@color/black"
-                    android:textSize="18sp" />
-
-            <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:orientation="horizontal">
-
-                <TextView
-                        android:id="@+id/tvHeight"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/rounded_background"
-                        android:padding="4dp"
-                        android:text="100 cm"
-                        android:textColor="@color/white"
-                        android:textSize="14sp" />
-
-                <org.adw.library.widgets.discreteseekbar.DiscreteSeekBar
-                        android:id="@+id/sbHeight"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        app:dsb_indicatorColor="@color/colorAccent"
-                        app:dsb_max="300"
-                        app:dsb_min="0"
-                        app:dsb_progressColor="@color/colorAccent"
-                        app:dsb_rippleColor="@color/colorAccent"
-                        app:dsb_trackColor="@color/colorAccent"
-                        app:dsb_trackHeight="4dp"
-                        app:dsb_value="100" />
-
-            </LinearLayout>
-        </LinearLayout>
-
-        <Button
-                android:onClick="calculate"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/button_background"
-                android:paddingBottom="16dp"
-                android:paddingTop="16dp"
-                android:text="Calculate BMI"
-                android:textColor="@color/white"
-                android:textSize="18sp" />
-    </LinearLayout>
-</LinearLayout>
+                android:layout_height="wrap_content" android:id="@+id/radioButton2" android:layout_weight="1"/>
+    </RadioGroup>
+    <TextView
+            android:text="Qual a intensidade de seu treino?"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView9"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/guideline5" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="8dp" android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp" android:layout_marginRight="8dp"
+            app:layout_constraintTop_toTopOf="@+id/guideline4" app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintVertical_bias="0.172" android:textSize="24sp"/>
+    <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:id="@+id/radioGroup"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp" app:layout_constraintBottom_toTopOf="@+id/guideline5"
+            android:layout_marginTop="24dp" app:layout_constraintTop_toBottomOf="@+id/textView9"
+            android:layout_marginRight="8dp" android:layout_marginEnd="8dp">
+        <RadioButton
+                android:text="Sedentário"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/radioButton3" android:layout_weight="1"/>
+        <RadioButton
+                android:text="Leve"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/radioButton4" android:layout_weight="1"/>
+        <RadioButton
+                android:text="Moderado"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/radioButton5" android:layout_weight="1"/>
+        <RadioButton
+                android:text="Intenso"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/radioButton6" android:layout_weight="1"/>
+    </RadioGroup>
+    <android.support.constraint.Guideline
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/guideline5"
+            app:layout_constraintGuide_percent="0.9"/>
+    <Button
+            android:id="@+id/btn_register2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/login_button_bg"
+            android:text="@string/Botton_proximo"
+            android:textColor="@color/colorAccent"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toTopOf="@+id/guideline5" android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginRight="8dp" android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginStart="8dp" app:layout_constraintStart_toStartOf="@+id/guideline"
+            android:layout_marginLeft="8dp"/>/>
+</android.support.constraint.ConstraintLayout>
