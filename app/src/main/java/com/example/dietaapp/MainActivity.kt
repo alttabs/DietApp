@@ -24,7 +24,6 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         userHeightFirst = findViewById(R.id.editText1)
-        userHeightSecond = findViewById(R.id.editText2)
         userWeight = findViewById(R.id.editText3)
         button = findViewById(R.id.button)
         display = findViewById(R.id.textView2)
@@ -47,13 +46,13 @@ class MainActivity : AppCompatActivity() {
         display?.setTextColor(Color.GREEN)
         //display?.setTextSize(30)
 
-        display?.text = "\tPLEASE ENTER THE ABOVE DETAILS"
-        info4.text = "Underweight     \t less than 18.5"
-        info5.text = "Normal          \t 18.5 to 24.9"
-        info6.text = "Overweight      \t t25.0 to 29.9"
-        info7.text = "Obese Clas |    \t 30.5 to 34.9"
-        info8.text = "Obese Class ||  \t 35.0 to 39.9"
-        info9.text = "Obese Class ||  \t greater than 40"
+        display?.text = "\tInserir Texto Aqui"
+        info4.text = "Abaixo do peso     \t Menos que 18.5"
+        info5.text = "Normal          \t\t 18.5 à 24.9"
+        info6.text = "Acima do peso      \t t25.0 à 29.9"
+        info7.text = "Obesidade classe |    \t 30.5 à 34.9"
+        info8.text = "Obesidade classe ||  \t 35.0 à 39.9"
+        info9.text = "Obesidade classe ||  \t Maior que 40"
 //end of the lame disply part
 
 
