@@ -60,14 +60,8 @@ class LoginActivity : AppCompatActivity() {
         btnCreateAccount = findViewById(R.id.btn_register_account) as Button
         mProgressBar = ProgressDialog(this)
         mAuth = FirebaseAuth.getInstance()
-        tvForgotPassword!!
-            .setOnClickListener { startActivity(Intent(this@LoginActivity,
-                ForgotPasswordActivity::class.java)) }
-        btnCreateAccount!!
-            .setOnClickListener { startActivity(
-                Intent(this@LoginActivity,
-                CreateAccountActivity::class.java)
-            ) }
+        tvForgotPassword!!.setOnClickListener { startActivity(Intent(this@LoginActivity, ForgotPasswordActivity::class.java)) }
+        btnCreateAccount!!.setOnClickListener { startActivity(Intent(this@LoginActivity, CreateAccountActivity::class.java)) }
         btnLogin!!.setOnClickListener { loginUser() }
     }
 

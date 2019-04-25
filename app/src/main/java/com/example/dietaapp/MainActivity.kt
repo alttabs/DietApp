@@ -1,8 +1,10 @@
 package com.example.dietaapp
 
 
+import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
+import android.os.Handler
 import android.support.v7.app.AppCompatActivity
 import android.view.View
 import android.widget.Button
@@ -12,10 +14,10 @@ import android.widget.TextView
 class MainActivity : AppCompatActivity() {
 
     var userHeightFirst: EditText? = null
-    var userHeightSecond:EditText? = null
-    var userWeight:EditText? = null
+    var userHeightSecond: EditText? = null
+    var userWeight: EditText? = null
     var button: Button? = null
-    var display:TextView? = null
+    var display: TextView? = null
 
     protected override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,14 +29,14 @@ class MainActivity : AppCompatActivity() {
         button = findViewById(R.id.button)
         display = findViewById(R.id.textView2)
 
-        //start of the lame diplay part+
+        //start of the lame display part+
 
-        var info4:TextView = findViewById(R.id.textView4)
-        var info5:TextView = findViewById(R.id.textView5)
-        var info6:TextView = findViewById(R.id.textView6)
-        var info7:TextView = findViewById(R.id.textView7)
-        var info8:TextView = findViewById(R.id.textView8)
-        var info9:TextView = findViewById(R.id.textView9)
+        var info4: TextView = findViewById(R.id.textView4)
+        var info5: TextView = findViewById(R.id.textView5)
+        var info6: TextView = findViewById(R.id.textView6)
+        var info7: TextView = findViewById(R.id.textView7)
+        var info8: TextView = findViewById(R.id.textView8)
+        var info9: TextView = findViewById(R.id.textView9)
 
         info4.setTextColor(Color.BLUE)
         info5.setTextColor(Color.GREEN)
@@ -55,33 +57,9 @@ class MainActivity : AppCompatActivity() {
 //end of the lame disply part
 
 
-        button?.setOnClickListener(object:View.OnClickListener
-        {
-            override fun onClick(v: View?)
-            {
-                val term1 : Int = userHeightFirst?.text.toString().toInt()
-                val term2 : Int = userHeightSecond?.text.toString().toInt()
-                val term3 : Int = userWeight?.text.toString().toInt()
-
-                val totalMeters : Double = term1*0.000 + term2*0.0000
-                val bmiCount : Double = term3/(totalMeters*totalMeters)
-
-                display?.text = ""
-                display?.append("\t\t\t")
-                display?.append(bmiCount.toString())
-
-                if(bmiCount.toInt() < 18.5 )
-                    display?.append("\nUNDERWEIGHT ALERT!!!!\nYOU SHOULD TRY GAINING SOME WEIGHT")
-                else if(bmiCount.toInt()<24.9)
-                    display?.append("\nCONGRATULATIONS!!!!!!!\nYOU HAVE A PREFECT BODY")
-                else
-                    display?.append("\nTIME TO GO TO THE GYM!!!")
+        button?.setOnClickListener {startActivity(Intent(this@MainActivity, Dieta1Activity::class.java))
             }
-        })
-    }
-
-
-
+        }
 
 
     }

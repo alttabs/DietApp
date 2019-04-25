@@ -21,4 +21,19 @@
     <string name="action_settings">Settings</string>
     <string name="Botao_proximo"/>
     <string name="Botton_proximo">Próximo</string>
+    <string name="dieta1" align="center">1000kcal - 400kcal proteina, 200kcal carboidratos, 400kcal gordura
+        4 refeições - 250kcal cada refeição\n\n\n\n
+
+        1- café da manha - 58g batata doce, 65g ovo, 17g pasta de amendoim\n\n
+        2- lanche x - 31g aipim, 68g carne, 16g nozes\n\n
+        3- almoço - 38g arroz branco, 42g frango, 11g azeite\n\n
+        4- lanche x - 57g peixe, 41g banana da terra, 18g amendoim </string>
+
+    <string name="dieta2" align="center">1500kcal - 600kcal proteina, 300kcal carboidratos, 600kcal gordura
+        4refeições - 375kcal por refeição\n\n\n\n
+
+        1- 97g ovo, 87g batata doce, 26g pasta de amendoim\n\n
+        2 - 47g aipim, 102g carne, 25g nozes\n\n
+        3 - 58g arroz branco, 63g frango, 17g azeite\n\n
+        4 - 87g peixe, 61g banana da terra, 26g amendoim </string>
 </resources>
