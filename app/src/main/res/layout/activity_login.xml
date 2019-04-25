@@ -14,8 +14,8 @@
             tools:context="br.com.fake.steam.LoginActivity">
 
         <ImageView
-                android:layout_width="236dp"
-                android:layout_height="201dp"
+                android:layout_width="wrap_content"
+                android:layout_height="272dp"
                 android:layout_gravity="center"
                 android:src="@mipmap/logo"/>
         <TextView
@@ -47,7 +47,7 @@
                 android:layout_marginTop="40dp"/>
 
         <EditText
-                android:id="@+id/et_password"
+                android:id="@id/et_password"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:inputType="textPassword"
