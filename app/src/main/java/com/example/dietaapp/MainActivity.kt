@@ -49,7 +49,7 @@ class MainActivity : AppCompatActivity() {
         display?.text = "\tInserir Texto Aqui"
         info4.text = "Abaixo do peso     \t Menos que 18.5"
         info5.text = "Normal          \t\t\t\t\t 18.5 à 24.9"
-        info6.text = "Acima do peso      \t t25.0 à 29.9"
+        info6.text = "Acima do peso      \t 25.0 à 29.9"
         info7.text = "Obesidade classe |    \t 30.5 à 34.9"
         info8.text = "Obesidade classe ||  \t 35.0 à 39.9"
         info9.text = "Obesidade classe ||  \t Maior que 40"
