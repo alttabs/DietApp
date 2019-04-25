@@ -32,7 +32,7 @@
                 android:id="@+id/et_last_name"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:inputType="textPassword"
+
                 android:background="@drawable/login_edittext_bg"
                 android:layout_marginTop="15dp"
                 android:layout_marginLeft="50dp"
