@@ -15,7 +15,7 @@
             android:layout_marginTop="16dp"
             app:layout_constraintTop_toTopOf="parent" android:layout_marginEnd="8dp"
             app:layout_constraintEnd_toStartOf="@+id/editText2" android:layout_marginRight="8dp"
-            android:layout_width="0dp" android:hint="Height(Feet)"/>
+            android:layout_width="0dp" android:hint="Altura(m)"/>
     <EditText
             android:layout_width="107dp"
             android:layout_height="wrap_content"
@@ -23,7 +23,7 @@
             android:ems="10"
             android:id="@+id/editText2"
             app:layout_constraintBaseline_toBaselineOf="@+id/editText1"
-            android:hint="Height(inch)" android:layout_marginEnd="8dp" app:layout_constraintEnd_toEndOf="parent"
+            android:hint="Altura(cm)" android:layout_marginEnd="8dp" app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginRight="8dp"/>
     <EditText
             android:layout_width="251dp"

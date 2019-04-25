@@ -63,7 +63,7 @@ class MainActivity : AppCompatActivity() {
                 val term2 : Int = userHeightSecond?.text.toString().toInt()
                 val term3 : Int = userWeight?.text.toString().toInt()
 
-                val totalMeters : Double = term1*0.305 + term2*0.0254
+                val totalMeters : Double = term1*0.000 + term2*0.0000
                 val bmiCount : Double = term3/(totalMeters*totalMeters)
 
                 display?.text = ""
