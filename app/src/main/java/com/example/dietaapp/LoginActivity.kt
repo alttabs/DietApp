@@ -70,7 +70,7 @@ class LoginActivity : AppCompatActivity() {
         email = etEmail?.text.toString()
         password = etPassword?.text.toString()
         if (!TextUtils.isEmpty(email) && !TextUtils.isEmpty(password)) {
-            mProgressBar!!.setMessage("Registering User...")
+            mProgressBar!!.setMessage("Logando...")
             mProgressBar!!.show()
             Log.d(TAG, "Logging in user.")
             mAuth!!.signInWithEmailAndPassword(email!!, password!!)

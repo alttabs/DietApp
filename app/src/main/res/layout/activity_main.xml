@@ -42,7 +42,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/button"
-            tools:layout_editor_absoluteX="8dp" tools:layout_editor_absoluteY="352dp"/>
+            tools:layout_editor_absoluteX="8dp" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/textView2"/>
     <TextView
             android:text="Entra com mais detalhes abaixo"
             android:layout_width="0dp"
@@ -53,8 +54,8 @@
             android:layout_marginRight="8dp"
             app:layout_constraintStart_toStartOf="parent"
             android:layout_marginLeft="8dp" android:layout_marginStart="8dp"
-            android:layout_marginTop="76dp"
-            app:layout_constraintTop_toBottomOf="@+id/editText3"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/editText9"
             app:layout_constraintHorizontal_bias="0.0"/>
     <TextView
             android:text="Classificação IMC"
@@ -122,5 +123,5 @@
             android:layout_marginRight="8dp"
             android:layout_height="103dp"
             android:background="@drawable/login_edittext_bg" app:layout_constraintHorizontal_bias="0.0"
-            tools:layout_editor_absoluteY="239dp"/>
+            android:layout_marginTop="11dp" app:layout_constraintTop_toBottomOf="@+id/textView1"/>
 </android.support.constraint.ConstraintLayout>

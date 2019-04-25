@@ -37,18 +37,18 @@ class MainActivity : AppCompatActivity() {
         var info8: TextView = findViewById(R.id.textView8)
         var info9: TextView = findViewById(R.id.textView9)
 
-        info4.setTextColor(Color.BLUE)
-        info5.setTextColor(Color.GREEN)
-        info6.setTextColor(Color.RED)
-        info7.setTextColor(Color.GREEN)
-        info8.setTextColor(Color.RED)
-        info9.setTextColor(Color.BLUE)
-        display?.setTextColor(Color.GREEN)
+        info4.setTextColor(Color.BLACK)
+        info5.setTextColor(Color.BLACK)
+        info6.setTextColor(Color.BLACK)
+        info7.setTextColor(Color.BLACK)
+        info8.setTextColor(Color.BLACK)
+        info9.setTextColor(Color.BLACK)
+        display?.setTextColor(Color.BLACK)
         //display?.setTextSize(30)
 
         display?.text = "\tInserir Texto Aqui"
         info4.text = "Abaixo do peso     \t Menos que 18.5"
-        info5.text = "Normal          \t\t 18.5 à 24.9"
+        info5.text = "Normal          \t\t\t\t\t 18.5 à 24.9"
         info6.text = "Acima do peso      \t t25.0 à 29.9"
         info7.text = "Obesidade classe |    \t 30.5 à 34.9"
         info8.text = "Obesidade classe ||  \t 35.0 à 39.9"
