@@ -6,14 +6,22 @@
             android:layout_height="match_parent"
             android:background="@drawable/login_bg">
 
-    <LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    <LinearLayout
+            xmlns:app="http://schemas.android.com/apk/res-auto"
             xmlns:tools="http://schemas.android.com/tools"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_gravity="center"
             android:orientation="vertical"
             tools:context="br.com.fake.steam.LoginActivity">
 
 
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:textColor="#EEE"
+                android:text="@string/first_name"/>
         <EditText
                 android:id="@+id/et_first_name"
                 android:layout_width="match_parent"
@@ -28,11 +36,17 @@
                 android:hint="@string/first_name"/>
 
 
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:textColor="#EEE"
+                android:text="@string/last_name"
+                android:layout_marginTop="40dp"/>
         <EditText
                 android:id="@+id/et_last_name"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:inputType="textPassword"
                 android:background="@drawable/login_edittext_bg"
                 android:layout_marginTop="15dp"
                 android:layout_marginLeft="50dp"
@@ -42,11 +56,17 @@
                 android:textColorHint="#CCC"
                 android:hint="@string/last_name"/>
 
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:textColor="#EEE"
+                android:text="@string/email"
+                android:layout_marginTop="40dp"/>
         <EditText
                 android:id="@+id/et_email"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:inputType="textEmailAddress"
                 android:background="@drawable/login_edittext_bg"
                 android:layout_marginTop="15dp"
                 android:layout_marginLeft="50dp"
@@ -56,6 +76,14 @@
                 android:textColorHint="#CCC"
                 android:hint="@string/email_hint"/>
 
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:textColor="#EEE"
+                android:text="@string/password"
+                android:layout_marginTop="40dp"/>
         <EditText
                 android:id="@+id/et_password"
                 android:layout_width="match_parent"
@@ -70,6 +98,7 @@
                 android:textColorHint="#CCC"
                 android:hint="@string/password_hint"/>
 
+
         <Button
                 android:id="@+id/btn_register"
                 android:layout_width="match_parent"
@@ -80,6 +109,9 @@
                 android:layout_marginTop="20dp"
                 android:layout_marginLeft="70dp"
                 android:layout_marginRight="70dp"/>
+
+
+
     </LinearLayout>
 
 </ScrollView>
