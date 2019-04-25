@@ -75,6 +75,7 @@ class CreateAccountActivity : AppCompatActivity() {
 
 
             Toast.makeText(this, "Campos preenchidos corretamente", Toast.LENGTH_SHORT).show()
+            startActivity(Intent(this@CreateAccountActivity, LoginActivity::class.java))
 
         } else {
             Toast.makeText(this, "Entre com mais informacoes", Toast.LENGTH_SHORT).show()
