@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Dieta App</string>
+    <string name="app_name" align="center">Dieta App</string>
     <string name="account_name">ACCOUNT NAME</string>
     <string name="password">PASSWORD</string>
     <string name="password_hint">**************</string>
