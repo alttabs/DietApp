@@ -125,15 +125,20 @@ class MainActivity : AppCompatActivity() {
 
             }
 
-            if(texto2.getText() != null){
+            button2?.setOnClickListener {
 
-                button2?.setOnClickListener { startActivity(Intent(this@MainActivity, Dieta1Activity::class.java)) }
+                if(texto2.getText().toString() != ""){
 
-            } else {
+                    startActivity(Intent(this@MainActivity, Dieta1Activity::class.java))
 
-                mensagemErro("Insira os dados corretamente acima antes de prosseguir")
+                } else {
 
+                    mensagemErro("Insira os dados corretamente acima antes de prosseguir")
+
+                }
             }
+
+
 
         }
 
@@ -147,16 +152,16 @@ class MainActivity : AppCompatActivity() {
                     if (checkedId == R.id.Mulher) {
 
                         this.sexo = true
-                        x.setText("sou muia")
+                        //x.setText("teste1")
 
                     } else if (checkedId == R.id.Homem) {
 
                         this.sexo = false
-                        x.setText("sou hom")
+                       // x.setText("teste2")
 
                     } else {
 
-                        x.setText("TEu cu")
+                        //x.setText("teste3")
 
                     }
 
