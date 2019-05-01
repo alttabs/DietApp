@@ -12,27 +12,25 @@ class MainActivity : AppCompatActivity() {
 
     //Declaração de variaveis
 
-    var userHeightFirst: EditText? = null
-    var userHeightSecond: EditText? = null
-    var userWeight: EditText? = null
     var button: Button? = null
-    var display: TextView? = null
+    var button2: Button? = null
     var sexo: Boolean? = null
     var TMB: Double? = null
     var idade: Int? = null
     var peso: Double? = null
-    var altura: Double? = null
+    var altura: Int? = null
     var atividade: Int? = null
-    var natasha: DoubleArray = doubleArrayOf(1.0, 1.11, 1.25, 1.48)
+    var natasha: DoubleArray = doubleArrayOf(1.00, 1.11, 1.25, 1.48)
 
 
     protected override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        userHeightFirst = findViewById(R.id.etAltura)
-        userWeight = findViewById(R.id.etPeso)
+        //userHeightFirst = findViewById(R.id.etAltura)
+        //userWeight = findViewById(R.id.etPeso)
         button = findViewById(R.id.button)
+        button2 = findViewById(R.id.button2)
 
 
         //Find view by id
@@ -40,79 +38,110 @@ class MainActivity : AppCompatActivity() {
         var etIdade = findViewById<EditText>(R.id.etIdade)
         var etPeso = findViewById<EditText>(R.id.etPeso)
         var etAltura = findViewById<EditText>(R.id.etAltura)
+        var texto = findViewById<TextView>(R.id.textView2)
 
-
-        //
-
-        idade = etIdade.toString().toInt()
-        this.peso = etPeso.toString().toDoubleOrNull()
-        this.altura = etAltura.toString().toDoubleOrNull()
-
-
-
-        /*
-        display?.text = "\tInserir Texto Aqui"
-        info4.text = "Abaixo do peso     \t Menos que 18.5"
-        info5.text = "Normal          \t\t\t\t\t 18.5 à 24.9"
-        info6.text = "Acima do peso      \t 25.0 à 29.9"
-        info7.text = "Obesidade classe |    \t 30.5 à 34.9"
-        info8.text = "Obesidade classe ||  \t 35.0 à 39.9"
-        info9.text = "Obesidade classe ||  \t Maior que 40"
-//end of the lame disply part
-*/
+        //inicializar funções
 
         verificarRadioSexo()
         verificarRadioAtividade()
-        //calcularTMB(altura!!, peso!!, idade!!, atividade!!)
 
 
-        button?.setOnClickListener {startActivity(Intent(this@MainActivity, Dieta1Activity::class.java))
+        button?.setOnClickListener {
 
-            calcularTMB(altura!!, peso!!, idade!!, atividade!!)
+            this.idade = etIdade.getText().toString().toInt()
+            this.peso = etPeso.getText().toString().toDouble()
+            this.altura = etAltura.getText().toString().toInt()
+
+            //tratar de peso
+
+            if(idade == null){
+                idade = 0
+            }
+
+            if(peso == null){
+                peso = 0.00
+            }
+
+            if(altura == null){
+                altura = 0
+            }
+
+
+
+            if(this.sexo == true){
+
+                TMB  = 354 -(idade!! * 6.9  ) + natasha[atividade!!] * (9.3 * peso!!) + (726 * (altura!!/100) )
+                texto.setText(TMB.toString())
+
+
+            } else if(this.sexo == false){
+
+                TMB  = 662 -(idade!! * 9.5  ) + natasha[atividade!!] * (15.9 * peso!!) + (539.6 * (altura!!/100) )
+                texto.setText(TMB.toString())
+
+            } else {
+
+                //mensagemErro()
+                texto.setText("vacilou")
 
             }
+
+            }
+
+            button2?.setOnClickListener { startActivity(Intent(this@MainActivity, Dieta1Activity::class.java)) }
+
         }
 
 
         public fun verificarRadioSexo(){
 
-            rgSexo.setOnCheckedChangeListener { group, checkedId ->  {
+            var x = findViewById<TextView>(R.id.textView3)
+            rgSexo.setOnCheckedChangeListener { group, checkedId ->
+                run {
 
-                if(checkedId == R.id.Mulher){
+                    if (checkedId == R.id.Mulher) {
 
-                    this.sexo = true
+                        this.sexo = true
+                        x.setText("sou muia")
 
-                } else if (checkedId == R.id.Homem){
+                    } else if (checkedId == R.id.Homem) {
 
-                    this.sexo = false
+                        this.sexo = false
+                        x.setText("sou hom")
+
+                    } else {
+
+                        x.setText("TEu cu")
+
+                    }
+
 
                 }
-
-
-            }}
+            }
 
         }
 
 
         public fun verificarRadioAtividade(){
 
-            rgAtividade.setOnCheckedChangeListener { group, checkedId ->  {
+            rgAtividade.setOnCheckedChangeListener { group, checkedId ->
+                run {
 
                 if(checkedId == R.id.rbSedentario){
 
-                    this.atividade = checkedId
+                    this.atividade = 0
 
                 } else if (checkedId == R.id.rbLeve){
 
-                    this.atividade = checkedId
+                    this.atividade = 1
 
                 } else if (checkedId == R.id.rbModerado){
 
-                    this.atividade = checkedId
+                    this.atividade = 2
 
                 } else if (checkedId == R.id.rbIntenso){
 
-                    this.atividade = checkedId
+                    this.atividade = 3
 
                 } else {
 
@@ -126,7 +155,7 @@ class MainActivity : AppCompatActivity() {
         }
 
 
-        public fun calcularTMB(altura: Double, peso: Double, idade: Int, atividade: Int){
+        public fun calcularTMB(altura: Int, peso: Double, idade: Int, atividade: Int){
 
             val texto = findViewById<TextView>(R.id.textView3)
 
