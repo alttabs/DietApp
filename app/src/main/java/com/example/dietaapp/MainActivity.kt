@@ -16,10 +16,10 @@ class MainActivity : AppCompatActivity() {
     var button2: Button? = null
     var sexo: Boolean? = null
     var TMB: Double? = null
-    var idade: Int? = null
-    var peso: Double? = null
-    var altura: Int? = null
-    var atividade: Int? = null
+    var idade: Int? = 0
+    var peso: Double? = 0.00
+    var altura: Int? = 0
+    var atividade: Int? = 4
     var natasha: DoubleArray = doubleArrayOf(1.00, 1.11, 1.25, 1.48)
 
 
@@ -37,7 +37,7 @@ class MainActivity : AppCompatActivity() {
         var etIdade = findViewById<EditText>(R.id.etIdade)
         var etPeso = findViewById<EditText>(R.id.etPeso)
         var etAltura = findViewById<EditText>(R.id.etAltura)
-        var texto = findViewById<TextView>(R.id.textView2)
+        var texto2 = findViewById<TextView>(R.id.textView3)
 
         //inicializar funções
 
@@ -47,47 +47,93 @@ class MainActivity : AppCompatActivity() {
 
         button?.setOnClickListener {
 
-            this.idade = etIdade.getText().toString().toInt()
-            this.peso = etPeso.getText().toString().toDouble()
-            this.altura = etAltura.getText().toString().toInt()
+            //Tirar o null
+
+            if(etIdade.getText().toString() == ""){
+
+                idade = 0
+
+            } else {
+
+                this.idade = etIdade.getText().toString().toInt()
+
+            }
+
+            if(etPeso.getText().toString() == ""){
+
+                peso = 0.00
+
+            } else {
+
+                this.peso = etPeso.getText().toString().toDouble()
+
+            }
+
+            if(etAltura.getText().toString() == ""){
+
+                altura = 0
+
+            } else {
+
+                this.altura = etAltura.getText().toString().toInt()
+
+            }
+
+            // aki fica algum comentario util
+
+
+
+
 
             //tratar de peso
 
-            if(idade == null){
+            if(idade == 0){
                 idade = 0
-            }
-
-            if(peso == null){
+                mensagemErro("Por favor, digite a idade")
+            } else if(idade!! >= 100.00 || idade!! <=12.00 ) {
+                mensagemErro("Idade inválida")
+            } else if(peso == 0.00){
                 peso = 0.00
-            }
-
-            if(altura == null){
+                mensagemErro("Por favor, digite o peso")
+            } else if(peso!! >= 300.00 || peso!! <=40.00 ) {
+                mensagemErro("Peso inválido")
+            } else if(altura == 0){
                 altura = 0
-            }
+                mensagemErro("Por favor, digite a altura")
+            } else if(altura!! >= 300 || altura!! <=100 ) {
+                mensagemErro("Altura inválida")
+            } else if (atividade!! == 4){
 
+                mensagemErro("Por favor, selecione o fator de atividade")
 
-
-            if(this.sexo == true){
+            } else if(this.sexo == true){
 
                 TMB  = 354 -(idade!! * 6.9  ) + natasha[atividade!!] * (9.3 * peso!!) + (726 * (altura!!/100) )
-                texto.setText(TMB.toString())
+                texto2.setText(TMB.toString())
 
 
             } else if(this.sexo == false){
 
                 TMB  = 662 -(idade!! * 9.5  ) + natasha[atividade!!] * (15.9 * peso!!) + (539.6 * (altura!!/100) )
-                texto.setText(TMB.toString())
+                texto2.setText(TMB.toString())
 
             } else {
 
-                //mensagemErro()
-                texto.setText("vacilou")
+                mensagemErro("Por favor, selecione seu sexo")
 
             }
 
             }
 
-            button2?.setOnClickListener { startActivity(Intent(this@MainActivity, Dieta1Activity::class.java)) }
+            if(texto2.getText() != null){
+
+                button2?.setOnClickListener { startActivity(Intent(this@MainActivity, Dieta1Activity::class.java)) }
+
+            } else {
+
+                mensagemErro("Insira os dados corretamente acima antes de prosseguir")
+                
+            }
 
         }
 
@@ -180,9 +226,9 @@ class MainActivity : AppCompatActivity() {
 
 
 
-        public fun mensagemErro(){
+        public fun mensagemErro(mensagem: String ){
 
-
+            Toast.makeText(this, mensagem, Toast.LENGTH_SHORT).show()
 
         }
 
