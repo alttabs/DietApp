@@ -132,7 +132,7 @@ class MainActivity : AppCompatActivity() {
             } else {
 
                 mensagemErro("Insira os dados corretamente acima antes de prosseguir")
-                
+
             }
 
         }
