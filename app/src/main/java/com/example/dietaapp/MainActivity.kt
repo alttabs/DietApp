@@ -27,8 +27,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        //userHeightFirst = findViewById(R.id.etAltura)
-        //userWeight = findViewById(R.id.etPeso)
+
         button = findViewById(R.id.button)
         button2 = findViewById(R.id.button2)
 
