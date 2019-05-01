@@ -4,8 +4,8 @@
     <string name="password">PASSWORD</string>
     <string name="password_hint">**************</string>
     <string name="forgot_your_login_info">ESQUECEU SUA SENHA?</string>
-    <string name="sign_in">SIGN IN</string>
-    <string name="remember_my_password">REMEMBER MY PASSWORD</string>
+    <string name="sign_in">LOGIN</string>
+    <string name="remember_my_password">LEMBRAR MINHA SENHA</string>
     <string name="username">Username</string>
     <string name="first_name">PRIMEIRO NOME</string>
     <string name="last_name">SOBRENOME</string>
