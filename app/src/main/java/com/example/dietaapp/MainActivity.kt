@@ -129,7 +129,15 @@ class MainActivity : AppCompatActivity() {
 
                 if(texto2.getText().toString() != ""){
 
-                    startActivity(Intent(this@MainActivity, Dieta1Activity::class.java))
+                    /*val intent = Intent(this, Dieta3Activity::class.java)
+                        intent.putExtra("EER", TMB.toString())
+                        startActivity(intent)*/
+
+                    startActivity(Intent (this@MainActivity, Dieta1Activity::class.java).apply {
+
+                        putExtra("eer", TMB.toString())
+
+                    })
 
                 } else {
 
